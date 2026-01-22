@@ -13,6 +13,10 @@ public class Tests
         var teamId = Guid.NewGuid();
         var invitedByUserId = Guid.NewGuid();
         var invitedUserId = Guid.NewGuid();
+
+        var inviteCommand = new InviteUserCommand(teamId, invitedUserId, invitedByUserId);
+
+        Console.WriteLine(inviteCommand);
         
         var teamState = new TeamState(teamId, new List<Guid>{ invitedByUserId }, new List<Guid>{  });
         var command = new InviteUserCommand(teamState.TeamId, invitedUserId, invitedByUserId);

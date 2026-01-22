@@ -30,3 +30,8 @@ public record Test4
 }
 
 public class Test5(string sjef, int bolle);
+
+public class A {}
+public record B {}
+public struct C {}
+public record struct D {}
