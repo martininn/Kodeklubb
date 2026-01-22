@@ -11,28 +11,22 @@ public class Test
 
 public struct Test2
 {
-    public Test2()
-    {
-        
-    }
 }
 
 public record struct Test3
 {
     public string FirstName;
     public string LastName;
-    public Test3()
-    {
-        
-    }
 }
 
 public record Test4
 {
-    public string Sjef;
+    public string Sjef { get; init; }
 
-    public Test4()
+    public Test4(string sjef)
     {
-        
+        Sjef = sjef;
     }
 }
+
+public class Test5(string sjef, int bolle);

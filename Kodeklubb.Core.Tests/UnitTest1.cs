@@ -10,7 +10,6 @@ public class Tests
     [Test]
     public void InviterPutsUserInPendingAndReturnsEvent()
     {
-        var test = new Test4();
         var teamId = Guid.NewGuid();
         var invitedByUserId = Guid.NewGuid();
         var invitedUserId = Guid.NewGuid();
