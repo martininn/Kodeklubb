@@ -6,5 +6,5 @@ public record UserInvitedToTeam(
     DateTime InvitedAt
     ) : IDomainEvent
 {
-    public DateTime TimeStamp { get; }
+    public DateTime TimeStamp { get; } = InvitedAt;
 }

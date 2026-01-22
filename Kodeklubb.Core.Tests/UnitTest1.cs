@@ -76,4 +76,19 @@ public class Tests
         Assert.That(result.Outcome.Status, Is.EqualTo(OutcomeStatus.Rejected));
         Console.WriteLine(result.Outcome);
     }
+
+    [Test]
+    public void UserAcceptsInvitation()
+    {
+        var teamId = Guid.NewGuid();
+        var invitedUserId = Guid.NewGuid();
+
+        var teamState = new TeamState(teamId, new List<Guid>(), new List<Guid> { invitedUserId });
+        var command = new AcceptInvitationCommand(teamId, invitedUserId);
+        var now = new DateTime(2026, 01, 22);
+
+        var result = TeamService.HandleAccepts(teamState, command, now);
+        Assert.That(result.Outcome.Status, Is.EqualTo(OutcomeStatus.Accepted));
+        Console.WriteLine(result.Outcome);
+    }
 }
