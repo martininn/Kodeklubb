@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kodeklubb.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c28207c914ac05fccf84552f07cceb3c5b051053")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98c563f440942c3452786f888a5b0c9986353735")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kodeklubb.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kodeklubb.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

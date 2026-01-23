@@ -25,6 +25,25 @@ Record har litt mer features, som f.eks. en innebygd ToString som gjør det lett
 Class og record er reference type, struct og record struct er value type.
 Alt som har record foran seg har funksjonalitet som gjør det lettere å praktisere immutability. 
 
+For best case scenario immutability for alle fire, vil det se slik ut:
+```
+public class Test
+{
+    public string Sjef { get; init; }
+    public Test(string sjef)
+    {
+        Sjef = sjef;
+    }
+}
+
+public record Test2(string Sjef);
+
+public readonly record struct Test3(string sjef);
+
+
+public readonly struct Test4(string sjef);
+```
+
 7) **Hva fant dere ut om default constructor i de fire tilfellene?**
 
 De er ganske samma, det blir det du gjør det til. Primary constructor i class og record gjør "init",
