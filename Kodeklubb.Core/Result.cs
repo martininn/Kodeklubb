@@ -1,6 +1,6 @@
 namespace Kodeklubb.Core;
 
-public record Result(
+public readonly record struct Result(
     Outcome Outcome,
     TeamState NewState,
     IReadOnlyList<IDomainEvent> Events

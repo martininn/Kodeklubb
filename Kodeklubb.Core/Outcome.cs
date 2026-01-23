@@ -6,9 +6,9 @@ public enum OutcomeStatus
     Rejected
 }
 
-public record Outcome(
+public readonly record struct Outcome(
     OutcomeStatus Status,
-    string? ErrorCode = null
+    string? Message = null
 )
 {
     public static Outcome Accepted()
@@ -18,6 +18,6 @@ public record Outcome(
 
     public static Outcome Rejected(string message)
     {
-        return new Outcome(OutcomeStatus.Rejected, "User is already a member");
+        return new Outcome(OutcomeStatus.Rejected, message);
     }
 }

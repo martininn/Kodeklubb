@@ -76,6 +76,23 @@ public class Tests
         Assert.That(result.Outcome.Status, Is.EqualTo(OutcomeStatus.Rejected));
         Console.WriteLine(result.Outcome);
     }
+    
+    [Test]
+    public void StateIsUnchangedIfInvitationIsRejected_EventListShouldBeEmpty()
+    {
+        var teamId = Guid.NewGuid();
+        var invitedByUserId = Guid.NewGuid();
+        var invitedUserId = Guid.NewGuid();
+        
+        var teamState = new TeamState(teamId, new List<Guid>{ invitedByUserId }, new List<Guid>{ invitedUserId });
+        var command = new InviteUserCommand(teamState.TeamId, invitedUserId, invitedByUserId);
+        var now = new DateTime(2026, 01, 21);
+        
+        var result = TeamService.Handle(teamState, command, now);
+
+        Assert.That(teamState.PendingInvitations, Does.Contain(invitedUserId));
+        Assert.That(result.Events, Is.Empty);
+    }
 
     [Test]
     public void UserAcceptsInvitation()

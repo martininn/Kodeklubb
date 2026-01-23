@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kodeklubb.Core.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+011906881179269df9754965951a10ddbf3d4250")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c28207c914ac05fccf84552f07cceb3c5b051053")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kodeklubb.Core.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kodeklubb.Core.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
